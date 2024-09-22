@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Captura de Datos</title>
+    <meta name="description" content="Landing page para capturar datos de contacto como nombre completo y WhatsApp. Recibe información directamente en tu teléfono.">
+    <meta name="keywords" content="landing page, captura de datos, formulario, WhatsApp, nombre completo">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');  // Reemplaza con tu ID de medición
+    </script>
+    
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos (opcional) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 8px;
+        }
+        .container img {
+            
+            max-width: 400px;
+            margin-bottom: 10px;
+            margin-top: 70px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .custom-text {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="tel"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="ebook1.jpg" alt="Imagen de ejemplo">
+        <h1>Recíbelo en tu WhatsApp!</h1>
+        <p class="custom-text">Felicidades por interesarte en cambiar tu dinámica familiar con el Método Montessori.
+Este ebook contiene tips de mucho valor para todas las edades y será una excelente herramienta para empezar a transformarte en una faciitadora del aprendizaje. 
+El libro es solo el principio, con la guía y el acompañamiento adecuados, puedes convertirte en una profesional en el Método Montessori, una portunidad increíble para hacer crecer a tus hijos de manera sorpredente.</p> <!-- Línea de texto personalizable -->
+        <p>Introduce tu nombre completo y WhatsApp para recibir más información.</p>
+        <form id="captureForm" action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="post" target="_self" onsubmit="redirectUser(event)">
+            <!-- Cambiar FORM_ID por el ID del formulario de Google Forms -->
+            <input type="text" name="entry.123456789" placeholder="Nombre completo" required>
+            <!-- Cambiar entry.123456789 por el ID de la entrada de Google Forms para el nombre -->
+            
+            <input type="tel" name="entry.987654321" placeholder="WhatsApp" required>
+            <!-- Cambiar entry.987654321 por el ID de la entrada de Google Forms para WhatsApp -->
+            
+            <button type="submit">¡Quiero mi regalo!</button>
+<p class="custom-text">Recibirás tu regalo en los próximos minutos.
+La información enviada por WhatsApp fluye mejor si nos agragas a tus contactos.</p>
+
+        </form>
+    </div>
+
+    <!-- Seguimiento de eventos de Google Analytics y Redireccionamiento -->
+    <script>
+        document.getElementById('captureForm').addEventListener('submit', function(event) {
+            // Seguimiento de eventos en Google Analytics
+            gtag('event', 'form_submit', {
+                'event_category': 'engagement',
+                'event_label': 'Formulario enviado'
+            });
+        });
+
+        function redirectUser(event) {
+            // Prevenir el envío automático del formulario para realizar la redirección primero
+            event.preventDefault();
+
+            // Aquí redireccionamos al usuario a la URL deseada
+            window.location.href = "https://educaciongloballatam.github.io/Independencia_Creatividad_Montessori/";
+        }
+    </script>
+</body>
+</html>
