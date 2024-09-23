@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a Héroes Montessori</title>
+    <title>Landing Page - Captura de Datos</title>
     <meta name="description" content="Landing page para capturar datos de contacto como nombre completo y WhatsApp. Recibe información directamente en tu teléfono.">
     <meta name="keywords" content="landing page, captura de datos, formulario, WhatsApp, nombre completo">
     
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D33V487JB7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-D33V487JB7');
-</script>
+      gtag('config', 'G-XXXXXXXXXX');  // Reemplaza con tu ID de medición
+    </script>
     
     <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos (opcional) -->
     <style>
@@ -87,12 +87,12 @@
 Este ebook contiene tips de mucho valor para todas las edades y será una excelente herramienta para empezar a transformarte en una faciitadora del aprendizaje. 
 El libro es solo el principio, con la guía y el acompañamiento adecuados, puedes convertirte en una profesional en el Método Montessori, una portunidad increíble para hacer crecer a tus hijos de manera sorpredente.</p> <!-- Línea de texto personalizable -->
         <p>Introduce tu nombre completo y WhatsApp para recibir más información.</p>
-        <form id="captureForm" action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="post" target="_self" onsubmit="redirectUser(event)">
+        <form id="captureForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd-37r3FoOkcccuuBrNgSNomi4CwW32_L3gWdB61KnThqN6GQ/formResponse" method="post" target="_self" onsubmit="redirectUser(event)">
             <!-- Cambiar FORM_ID por el ID del formulario de Google Forms -->
-            <input type="text" name="entry.123456789" placeholder="Nombre completo" required>
+            <input type="text" name="entry.1634909032" placeholder="Nombre completo" required>
             <!-- Cambiar entry.123456789 por el ID de la entrada de Google Forms para el nombre -->
             
-            <input type="tel" name="entry.987654321" placeholder="WhatsApp" required>
+            <input type="tel" name="entry.1442391583" placeholder="WhatsApp" required>
             <!-- Cambiar entry.987654321 por el ID de la entrada de Google Forms para WhatsApp -->
             
             <button type="submit">¡Quiero mi regalo!</button>
